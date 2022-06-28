@@ -30,3 +30,19 @@ Before we get to development scenarios, let's take a moment to understand the co
 ![GitHub-Flow](./assets/github-flow.png)
 
 We are going to use the GitHub-Flow branching model in this lesson.
+
+## Visualizing Commit History
+
+Git is hard. There are tools to make it easier.
+
+Install [Sourcetree](https://www.sourcetreeapp.com/)
+  - Sourcetree is a Git GUI client. 
+  - It will help us visualize commits, branching, merging
+
+![Sourcetree](./assets/hero-mac-screenshot.png)
+
+Install [P4Merge](https://www.perforce.com/downloads/visual-merge-tool)
+  - Helix Visual Merge Tool (P4Merge) is a three-way merging and side-by-side file comparison tool.
+  - It will help us visualize merge conflicts
+
+![P4Merge](./assets/p4merge.png)

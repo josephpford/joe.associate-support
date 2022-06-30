@@ -25,12 +25,7 @@ This lesson will walk you through the following git concepts
   - [Reset / Revert](./undo.md)
   - [Cherry Picking](./cherry.md)
 
-## Workspace / Index / Repository / Remote
-
-![Workspace / Index / Repository / Remote](./assets/git-workspace.png)
-
-
-## Aliases
+## Disclaimer - aliases in use!
 
 You may see me use these aliases during lecture. I will try to remember to type out full commands, but muscle memory means that I will probably forget once or twice.
 ```
@@ -49,9 +44,26 @@ On branch main
 nothing to commit, working tree clean
 ```
 
+## Workspace / Index / Repository / Remote
+
+![Workspace / Index / Repository / Remote](./assets/git-workspace.png)
+
 ## GitHub-Flow branch-based workflow
 
-Before we get to development scenarios, let's take a moment to understand the concept of a branching model. There are [multiple branching models](https://www.atlassian.com/git/tutorials/comparing-workflows) in use today for Git. [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) is a branching model that can use different branches to track multiple releases simultaneously, and [GitHub-Flow](https://docs.github.com/en/get-started/quickstart/github-flow) is a newer branching model that emphasizes simplicity for frequent deployments. There is no "best" branching model, just different branching models with different pros and cons.
+Branching Models
+  - No "best" branching model
+  - Pros/Cons for every branching model
+  - [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+    - Older, stricter, mature, clear roles of branches / good processes established for most scenarios
+    - Good for tracking multiple releases simultaneously
+  - [GitHub-Flow](https://docs.github.com/en/get-started/quickstart/github-flow)
+    - Newer, more flexible
+    - emphasizes simplicity for frequent deployments
+    - Tiny bit more roll-your-own for special scenarios
+
+More reading:
+  - [multiple branching models](https://www.atlassian.com/git/tutorials/comparing-workflows)
+
 
 ### GitFlow
 
@@ -61,7 +73,7 @@ Before we get to development scenarios, let's take a moment to understand the co
 
 ![GitHub-Flow](./assets/github-flow.png)
 
-We are going to use the GitHub-Flow branching model in this lesson.
+We are going to use the **GitHub-Flow** branching model in this lesson.
 
 ## Visualizing Commit History
 

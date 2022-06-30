@@ -1,16 +1,21 @@
 # Cheat Sheet
 
-git clone <remote-url>
+Ordered by personal opinion of usefulness.
+
+git status
+  - Self-explanatory
+
+git clone https://github.com/dev10-program/prime-therapeutics-training
   - clone (download) a git repository from remote to your local
 
-git checkout -b feature/newBranchName
+git checkout -b feature/new-branch-name
   - create a new branch
 
-git checkout feature/someOtherBranch
+git checkout feature/some-other-branch
   - check out a different existing branch
 
 git fetch
-  - pull from remote
+  - update local copy of remote, but do not merge with local repository
 
 git merge
   - merge two (or more) branches

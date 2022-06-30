@@ -10,10 +10,12 @@ Rebase is great when you are working independently. If you are working with othe
 
 ABC-113: Add "Conclusion" to "book.md" at end of file.
   - assigned to you
+
 ABC-114: Add "Summary" to "book.md" at end of file.
   - assigned to instructor
 
-Steps
+## Steps
+
   0. Checkout main and pull latest, make sure clean.
   1. Create/Checkout New Feature Branch
   2. Make code changes
@@ -28,17 +30,6 @@ Steps
   11. `git merge --continue` to finish merging (`git merge --abort` if you make a mistake and want to start over)
   12. Repeat 9, 10, 11 as necessary.
   13. Push / Create Pull Request
-
-### Merge Conflicts - Rebase
-  9. Rebase
-  10. Merge Conflicts
-  11. Push / Create Pull Request
-
-### Merge Conflicts - Squash and Rebase
-  9. Squash
-  10. Rebase
-  11. Merge Conflicts
-  12. Push / Create Pull Request
 
 ## Next
   - [Squash](./squash.md)

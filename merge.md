@@ -1,4 +1,4 @@
-# Merge Conflicts
+# Merge
 
 Merge incorporates changes from another branch into the current branch. Merge sometimes introduces a "merge commit". 
 
@@ -14,7 +14,8 @@ ABC-111: Add "Introduction" to "book.md" before chapter 1
 ABC-112: Add "Forward" to "book.md" before chapter 1
   - assigned to instructor
 
-Steps
+## Steps
+
   0. Checkout main and pull latest, make sure clean.
   1. Create/Checkout New Feature Branch (feature/ABC-111)
   2. Make code changes

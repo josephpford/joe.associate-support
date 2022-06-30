@@ -90,6 +90,8 @@ Consider installing [P4Merge](https://www.perforce.com/downloads/visual-merge-to
 
 ![P4Merge](./assets/p4merge.png)
 
+This is a test
+
 ## Tiny bit of VIM
 
 VIM is the default git text editing tool that you've probably encountered during various git procedures. A lot of people find VIM intimidating, but it really isn't that bad. We're going to learn just 4 commands to use its most basic features. 

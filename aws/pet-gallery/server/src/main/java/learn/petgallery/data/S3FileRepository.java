@@ -57,29 +57,35 @@ public class S3FileRepository implements FileRepository {
                 .credentialsProvider(StaticCredentialsProvider.create(awsCreds))
                 .build()) {
 
-            try {
-                if (image.getWidth() > MAX_IMAGE_WIDTH) {
-                    image = resizeImage(image);
-                }
-
-                String extension = filename.substring(filename.lastIndexOf(".") + 1);
-                ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-                ImageIO.write(image, extension, outputStream);
-                byte[] bytes = outputStream.toByteArray();
-
-                PutObjectRequest request = PutObjectRequest.builder()
-                        .bucket(bucketName)
-                        .key(filename)
-                        .contentType(contentType)
-                        .build();
-
-                PutObjectResponse response = s3.putObject(request, RequestBody.fromBytes(bytes));
-
-                return s3.utilities().getUrl(builder -> builder.bucket(bucketName).key(filename)).toString();
-            } catch (IOException | S3Exception ex) {
-                throw new FileUploadException(ex.getMessage(), ex);
+            if (image.getWidth() > MAX_IMAGE_WIDTH) {
+                image = resizeImage(image);
             }
+
+            PutObjectRequest request = buildS3PutRequest(filename, contentType);
+            RequestBody requestBody = convertImageRequestBody(filename, image);
+
+            PutObjectResponse response = s3.putObject(request, requestBody);
+
+            return s3.utilities().getUrl(builder -> builder.bucket(bucketName).key(filename)).toString();
+        } catch (IOException | S3Exception ex) {
+            throw new FileUploadException(ex.getMessage(), ex);
         }
+    }
+
+    private PutObjectRequest buildS3PutRequest(String filename, String contentType) {
+        return PutObjectRequest.builder()
+                .bucket(bucketName)
+                .key(filename)
+                .contentType(contentType)
+                .build();
+    }
+
+    private RequestBody convertImageRequestBody(String filename, BufferedImage image) throws IOException {
+        String extension = filename.substring(filename.lastIndexOf(".") + 1);
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        ImageIO.write(image, extension, outputStream);
+        byte[] bytes = outputStream.toByteArray();
+        return RequestBody.fromBytes(bytes);
     }
 
     private BufferedImage resizeImage(BufferedImage original) {

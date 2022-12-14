@@ -30,7 +30,7 @@ function Home() {
     let nextIndex = pets.indexOf(currentPet);
 
     if (nextIndex < 1) {
-      nextIndex = pets.length.length;
+      nextIndex = pets.length;
     }
     nextIndex = nextIndex - 1;
 

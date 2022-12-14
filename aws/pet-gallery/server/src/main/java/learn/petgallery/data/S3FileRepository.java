@@ -62,7 +62,7 @@ public class S3FileRepository implements FileRepository {
             }
 
             PutObjectRequest request = buildS3PutRequest(filename, contentType);
-            RequestBody requestBody = convertImageRequestBody(filename, image);
+            RequestBody requestBody = convertImageToRequestBody(filename, image);
 
             PutObjectResponse response = s3.putObject(request, requestBody);
 
@@ -80,7 +80,7 @@ public class S3FileRepository implements FileRepository {
                 .build();
     }
 
-    private RequestBody convertImageRequestBody(String filename, BufferedImage image) throws IOException {
+    private RequestBody convertImageToRequestBody(String filename, BufferedImage image) throws IOException {
         String extension = filename.substring(filename.lastIndexOf(".") + 1);
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         ImageIO.write(image, extension, outputStream);

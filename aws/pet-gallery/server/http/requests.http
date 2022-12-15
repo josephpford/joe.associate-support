@@ -1,5 +1,5 @@
 
-@host =  http://localhost:8080
+@host = http://pet-gallery-api.us-east-2.elasticbeanstalk.com
 @path = /api/pet
 @url = {{host}}{{path}}
 
@@ -59,7 +59,7 @@ Accept: application/json
 
 ### 204 - deleted
 
-DELETE {{url}}/3 HTTP/1.1
+DELETE {{url}}/7 HTTP/1.1
 
 ### 404 - not found
 

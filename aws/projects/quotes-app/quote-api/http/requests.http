@@ -1,0 +1,54 @@
+@host = http://localhost:8080/quote
+
+GET {{host}}/1 HTTP/1.1
+
+###
+
+GET {{host}}/99 HTTP/1.1
+
+###
+
+GET {{host}}?person=ang HTTP/1.1
+
+###
+
+GET {{host}}?person=nope HTTP/1.1
+
+###
+
+GET {{host}} HTTP/1.1
+
+###
+
+POST {{host}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "phrase": "test phrase",
+    "person": "person"    
+}
+
+### Invalid POST
+
+POST {{host}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "phrase": "test phrase",
+    "person": ""    
+}
+
+###
+
+PUT {{host}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "quoteId": 3,
+    "phrase": "updated phrase",
+    "person": "upated person"    
+}
+
+###
+
+DELETE {{host}}/3 HTTP/1.1

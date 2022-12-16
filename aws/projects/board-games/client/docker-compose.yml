@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+
+  ui:
+    image: 255732018797.dkr.ecr.us-east-2.amazonaws.com/board-game-ui:1.0
+    environment:
+      - API_URL=${API_URL}
+    ports:
+      - 3000:80

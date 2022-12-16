@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+@font-face {
+  font-family: space-mission;
+  src: url(assets/SpaceMission-rgyw9.otf)
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 140px;
+  padding: 20px;
+  background: rgba(240, 111, 76, 0.8);
+  margin-bottom: 20px;
+}
+
+header a {
+  text-decoration: none;
+}
+
+.logo {
+  background: url(assets/logo.png);
+  background-size: 100px;
+  background-repeat: no-repeat;
+  font-family: space-mission;
+  font-size: 3em;
+  color: rgba(209, 19, 19, .8);
+  padding-left: 100px;
+  text-shadow: 3px 3px rgb(112, 5, 5);
+  transition: .3s;
+}
+
+.logo:hover {
+  color: white;
+  transform: translate(10px);
+}
+
+nav {
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav a {
+  font-family: Dosis;
+  color: #b67b65;
+  font-size: 1.8rem;
+  text-shadow: 2px 2px black;
+  transition: .3s;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.banner {
+  background: url(assets/board-games-collection-shelf.jpg) no-repeat;
+  width: 100%;
+  height: 30vh;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+.games, .form {
+  /* height: 50vh; */
+  width: 100%;
+  background-color: #CC4422;
+  padding-bottom: 40px;
+}
+
+h1 {
+  font-family: Dosis;
+  color: white;
+  font-size: 1.8rem;
+  margin: 0 0 40px 30px;
+  padding-top: 40px;
+  text-shadow: 2px 2px black;
+}
+
+h2 {
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.game-list {
+  padding: 20px;
+}
+
+.form-label, .form-check-label {
+  color: white;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 10vh;
+  font-family: Dosis;
+  padding-top: 30px;
+}
+
+@media(max-width:800px) {
+
+  /*anything less than 800px will inherit the styles*/
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 180px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .logo {
+    background-size: 80px;
+    font-size: 2.3rem;
+    color: #135e46;
+    padding-left: 80px;
+  }
+
+  nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  nav a {
+    font-size: 1.5rem;
+  }
+
+  .banner {
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .game-list div {
+    width: 90%;
+    height: 35vh;
+    margin-bottom: 20px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    height: 15vh;
+  }
+}

@@ -26,8 +26,7 @@ body {
     font-family: 'Quicksand', sans-serif;
     background: linear-gradient(315deg, hsla(324, 100%, 83%, 0.4) 10%, hsla(242, 82%, 83%, 0.4) 100%);
     background-size: cover;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 95vh;
 }
 .bubble-text {
     font-family: 'Modak', cursive;
@@ -103,7 +102,7 @@ body {
     border-radius: 10px;
     line-height: 30px;
     font-size: 120%;
-    height: 300px;
+    height: 350px;
 }
 .valentine-card-body .valentine-buttons {
     position: absolute;

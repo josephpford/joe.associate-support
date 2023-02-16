@@ -1,0 +1,71 @@
+
+@host =  http://localhost:8080
+@path = /api/board-game
+@url = {{host}}{{path}}
+
+GET {{host}}/api/category HTTP/1.1
+
+###
+
+GET {{url}} HTTP/1.1
+
+### GET one by id
+
+GET {{url}}/1 HTTP/1.1
+
+### GET not-existing, expect 404 
+
+GET {{url}}/106 HTTP/1.1
+
+### POST invalid, expect 400
+
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJib2FyZC1nYW1lLWFwaSIsInN1YiI6ImpvaG5Ac21pdGguY29tIiwiYXV0aG9yaXRpZXMiOiJBRE1JTiIsImFwcFVzZXJJZCI6MSwiZXhwIjoxNjY0OTA5MjkzfQ.OY0TAJuKMVPx5xJpHo9L9MB7OCwNiK2JXqMiQSTuIYc
+
+{
+    "id": 1,
+    "name": "Great Space Race",
+    "rating": 1.5,
+    "minimumPlayers": 3,
+    "maximumPlayers": 6,
+    "inPrint": true
+}
+
+### POST Valid, expect 201
+
+POST {{url}} HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJib2FyZC1nYW1lLWFwaSIsInN1YiI6ImpvaG5Ac21pdGguY29tIiwiYXV0aG9yaXRpZXMiOiJBRE1JTiIsImFwcFVzZXJJZCI6MSwiZXhwIjoxNjY0OTA5MjkzfQ.OY0TAJuKMVPx5xJpHo9L9MB7OCwNiK2JXqMiQSTuIYc
+
+{
+    "name": "Trails",
+    "imageUrl": "https://cf.geekdo-images.com/alEgV88cpqFtaHAklI6lbw__itemrep/img/Dd52b2d5yzE7xQkrpUuXLyCMwQw=/fit-in/246x300/filters:strip_icc()/pic6214088.jpg",
+    "rating": 2.04,
+    "minimumPlayers": 2,
+    "maximumPlayers": 4,
+    "inPrint": true
+}
+
+### PUT valid, expect 204
+
+PUT {{url}}/1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Omicron Protocol",
+  "publisher": "Dead Alive Games",
+  "rating": 3.2,
+  "minimumPlayers": 1,
+  "maximumPlayers": 5,
+  "weightCategory": "MEDIUM_HEAVY"
+}
+
+### DELETE existing, expect 204
+
+DELETE {{url}}/5 HTTP/1.1
+
+### DELETE not-existing, expect 404
+
+DELETE {{url}}/106 HTTP/1.1

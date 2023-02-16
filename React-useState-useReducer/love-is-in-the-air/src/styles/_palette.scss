@@ -1,0 +1,23 @@
+// Custom Palette START
+$lavender-pink: #ffa9dcff;
+$periwinkle: #b2b0f7ff;
+$mint: #67cbabff;
+$amethyst: #935ad8ff;
+$jasmine: #ffe993ff;
+$light-red: #ea9498ff;
+$pale-periwinkle: #d7d9feff;
+$licorice: #1c1018ff;
+// Custom Palette END
+
+$theme-colors: (
+    "primary": $lavender-pink,
+    "secondary": $periwinkle,
+    "success": $mint,
+    "info": $amethyst,
+    "warning": $jasmine,
+    "danger": $light-red,
+    "light": $pale-periwinkle,
+    "dark": $licorice
+);
+
+@import "~bootstrap/scss/bootstrap";

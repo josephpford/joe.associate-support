@@ -1,0 +1,124 @@
+@use '_palette.scss';
+
+// Custom Palette START
+$lavender-pink: #ffa9dcff;
+$periwinkle: #b2b0f7ff;
+$mint: #67cbabff;
+$amethyst: #935ad8ff;
+$jasmine: #ffe993ff;
+$light-red: #ea9498ff;
+$pale-periwinkle: #d7d9feff;
+$licorice: #1c1018ff;
+// Custom Palette END
+
+// Global
+h1, h2, h3, h4, h5 {
+    font-family: 'Modak', cursive;
+}
+a, a:visited {
+    text-decoration: none;
+    color: $amethyst;
+}
+a:hover, a:active {
+    color: $mint;
+}
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(315deg, hsla(324, 100%, 83%, 0.4) 10%, hsla(242, 82%, 83%, 0.4) 100%);
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+.bubble-text {
+    font-family: 'Modak', cursive;
+    font-size: 120%;
+}
+.card-scalloped {
+    border: 0;
+    --mask: 
+        linear-gradient(#000 0 0) 50%/calc(100% - 27.75px) calc(100% - 27.75px) no-repeat,
+        radial-gradient(farthest-side,#000 98%,#0000) 0 0/30px 30px round;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+}
+
+// Navi.js
+.navbar {
+    padding: 0;
+    box-shadow: 0 1px 2px #1c101844;
+}
+.navbar .navbar-brand {
+    font-family: 'Modak', cursive;
+    font-size: 150%;
+    padding-bottom: 0;
+    padding-top: 5px;
+    color: $licorice;
+}
+.navbar .nav-link {
+    font-family: 'Caveat', cursive;
+    font-size: 130%;
+    color: $licorice;
+    opacity: 50%;
+    margin-left: 20px;
+}
+.navbar .nav-link.active {
+    opacity: 100%;
+    text-decoration: underline solid $amethyst 2px;
+}
+
+// Home.js
+.home-card {
+    position: relative;
+    max-width: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 30px;
+    background-color: $lavender-pink;            
+}
+.home-card-body {
+    padding: 30px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    line-height: 30px;
+    font-size: 120%;
+}
+
+// Valentine.js
+.valentine-card {
+    padding: 30px 30px 30px 10px;
+}
+.valentine-card.funny {
+    background-color: $periwinkle;
+}
+.valentine-card.sentimental {
+    background-color: $lavender-pink;
+}
+.valentine-card.cynical {
+    background-color: $mint;
+}
+.valentine-card-body {
+    position: relative;
+    padding: 30px 20px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    line-height: 30px;
+    font-size: 120%;
+    height: 300px;
+}
+.valentine-card-body .valentine-buttons {
+    position: absolute;
+    bottom: 20px;
+}
+.valentine-card-img {
+    transform: scaleX(-1);
+}
+.valentine-category {
+    font-size: 60%;
+}
+
+// ValentineForm.js
+.form-error-message {
+    font-style: italic;
+    font-size: 75%;
+    margin-left: 2px;
+}

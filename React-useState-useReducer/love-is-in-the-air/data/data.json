@@ -1,0 +1,40 @@
+{
+  "valentines": [
+      {
+          "id": 1,
+          "valentineMessage": "🚂 I choo-choo choose you!",
+          "valentineSource": "'The Simpsons'",
+          "valentineCategory": "Funny"
+      },
+      {
+          "id": 2,
+          "valentineMessage": "Don't ever think I fell for you, or fell over you. I didn't fall in love, I rose in it.",
+          "valentineSource": "Toni Morrison, 'Jazz'",
+          "valentineCategory": "Sentimental"
+      },
+      {
+          "id": 3,
+          "valentineMessage": "Love can change a person the way a parent can change a baby — awkwardly, and often with a great deal of mess.",
+          "valentineSource": "Lemony Snicket",
+          "valentineCategory": "Cynical"
+      },
+      {
+          "id": 4,
+          "valentineMessage": "I've only ever said 'I love you' to two men my entire life, Stone Cold Steve Austin and a guy in a dark club who I mistook for Stone Cold Steve Austin.",
+          "valentineSource": "'The Good Place'",
+          "valentineCategory": "Funny"
+      },
+      {
+          "id": 5,
+          "valentineMessage": "True love does have the power to redeem but only if we are ready for redemption. Love saves us only if we want to be saved.",
+          "valentineSource": "bell hooks, 'All About Love: New Visions'",
+          "valentineCategory": "Sentimental"
+      },
+      {
+          "id": 6,
+          "valentineMessage": "Love in action is a harsh and dreadful thing compared with love in dreams.",
+          "valentineSource": "Fyodor Dostoyevsky",
+          "valentineCategory": "Cynical"
+      }
+  ]
+}

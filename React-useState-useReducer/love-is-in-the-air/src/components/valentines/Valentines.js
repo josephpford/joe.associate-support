@@ -24,6 +24,8 @@ function valentineReducer(valentines, action) {
       });
     case "delete":
       return valentines.filter(valentine => valentine.id !== action.valentineId);
+    default:
+      return [];
   }
 }
 
@@ -124,10 +126,10 @@ function Valentines({ messages, setMessages, makeId }) {
       method: "DELETE"
     })
     .then(response => {
-        if (response.status == 404) {
+        if (response.status === 404) {
           setMessages([...messages, { id: makeId(), type: "failure", text: response.statusText }]);
         }
-        if (response.status == 200) {
+        if (response.status === 200) {
           setMessages([...messages, { id: makeId(), type: "success", text: "Valentine was successfully deleted." }])
           // const filteredValentines = valentines.filter(valentine => valentine.id !== deleteValentineId);
           // setValentines(filteredValentines);
@@ -142,11 +144,11 @@ function Valentines({ messages, setMessages, makeId }) {
   const colourCoder = (valentine) => {
     let baseClass = "valentine-card card-scalloped ";
 
-    if (valentine.valentineCategory == "Funny") {
+    if (valentine.valentineCategory === "Funny") {
       return baseClass + "funny";
-    } else if (valentine.valentineCategory == "Sentimental") {
+    } else if (valentine.valentineCategory === "Sentimental") {
       return baseClass + "sentimental";
-    } else if (valentine.valentineCategory == "Cynical") {
+    } else if (valentine.valentineCategory === "Cynical") {
       return baseClass + "cynical";
     } else {
       return baseClass;

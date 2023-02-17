@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useReducer } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
@@ -10,8 +10,31 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+function valentineReducer(valentines, action) {
+  switch(action.type) {
+    case "get":
+      return [...action.valentines];
+    case "edit":
+      if (action.auth === "ADMIN") {
+        return valentines.map(valentine => {
+          if (valentine.id === action.valentine.id) {
+            return action.valentine;
+          } else {
+            return valentine;
+          }
+        })} 
+        else {
+          console.log("NOPE");
+        }
+    case "delete":
+      return valentines.filter(valentine => valentine.id !== action.valentineId);
+  }
+}
+
 function Valentines({ messages, setMessages, makeId }) {
-  const [valentines, setValentines] = useState([]);
+  // const [valentines, setValentines] = useState([]);
+  const [valentines, dispatch] = useReducer(valentineReducer, []);
+
   const [editModalShow, setEditModalShow] = useState(false);
   const [deleteModalShow, setDeleteModalShow] = useState(false);
   const [deleteValentineId, setDeleteValentineId] = useState(0);
@@ -46,7 +69,10 @@ function Valentines({ messages, setMessages, makeId }) {
           navigate("/");
         }
       })
-      .then((data) => setValentines(data))
+      // .then((data) => setValentines(data))
+      .then((data) => {
+        dispatch({type: "get", valentines: data}) // Dispatch takes an 'action' object as an argument. Actions must have a 'type' property, and then a property for data
+      })
       .catch((errors) =>
         setMessages([
           ...messages,
@@ -77,14 +103,15 @@ function Valentines({ messages, setMessages, makeId }) {
         }
         if (response.status === 200) {
           setMessages([...messages, { id: makeId(), type: "success", text: "Valentine was successfully edited." }])
-          const editedValentines = valentines.map(valentine => {
-            if (valentine.id === valentineData.id) {
-              return valentineData;
-            } else {
-              return valentine;
-            }
-          });
-          setValentines(editedValentines);
+          // const editedValentines = valentines.map(valentine => {
+          //   if (valentine.id === valentineData.id) {
+          //     return valentineData;
+          //   } else {
+          //     return valentine;
+          //   }
+          // });
+          // setValentines(editedValentines);
+          dispatch({type: "edit", valentine: valentineData, auth: "ADMIN"});
         }
         setEditModalShow(false);
     })
@@ -106,8 +133,9 @@ function Valentines({ messages, setMessages, makeId }) {
         }
         if (response.status == 200) {
           setMessages([...messages, { id: makeId(), type: "success", text: "Valentine was successfully deleted." }])
-          const filteredValentines = valentines.filter(valentine => valentine.id !== deleteValentineId);
-          setValentines(filteredValentines);
+          // const filteredValentines = valentines.filter(valentine => valentine.id !== deleteValentineId);
+          // setValentines(filteredValentines);
+          dispatch({type: "delete", valentineId: deleteValentineId})
         }
         setDeleteModalShow(false);
         setDeleteValentineId(0);

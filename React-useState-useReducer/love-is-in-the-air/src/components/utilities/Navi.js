@@ -24,6 +24,11 @@ function Navi() {
                             Valentines
                         </Nav.Link>
                     </LinkContainer>
+                    <LinkContainer to="/valentines_SPA" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+                        <Nav.Link>
+                            Valentines v2
+                        </Nav.Link>
+                    </LinkContainer>
                     <LinkContainer to="/valentines/add" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
                         <Nav.Link>
                             Add Valentine

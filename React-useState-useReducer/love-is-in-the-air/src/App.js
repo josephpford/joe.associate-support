@@ -6,6 +6,7 @@ import MessageFactory from "./components/utilities/MessageFactory";
 import About from "./components/utilities/About";
 import NotFound from "./components/utilities/NotFound";
 import ValentineFactory from "./components/valentines/ValentineFactory";
+import Valentines from "./components/valentines/Valentines";
 import ValentineForm from "./components/valentines/ValentineForm";
 import ValentineDelete from "./components/valentines/ValentineDelete";
 
@@ -32,6 +33,13 @@ function App() {
           <Route path="/" element={< Home />} />
           <Route path="/valentines" element={
             <ValentineFactory  
+              messages={messages} 
+              setMessages={setMessages} 
+              makeId={makeId} 
+            />
+          } />
+          <Route path="/valentines_SPA" element={
+            <Valentines
               messages={messages} 
               setMessages={setMessages} 
               makeId={makeId} 

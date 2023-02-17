@@ -15,17 +15,13 @@ function valentineReducer(valentines, action) {
     case "get":
       return [...action.valentines];
     case "edit":
-      if (action.auth === "ADMIN") {
-        return valentines.map(valentine => {
-          if (valentine.id === action.valentine.id) {
-            return action.valentine;
-          } else {
-            return valentine;
-          }
-        })} 
-        else {
-          console.log("NOPE");
+      return valentines.map(valentine => {
+        if (valentine.id === action.valentine.id) {
+          return action.valentine;
+        } else {
+          return valentine;
         }
+      });
     case "delete":
       return valentines.filter(valentine => valentine.id !== action.valentineId);
   }
@@ -111,7 +107,7 @@ function Valentines({ messages, setMessages, makeId }) {
           //   }
           // });
           // setValentines(editedValentines);
-          dispatch({type: "edit", valentine: valentineData, auth: "ADMIN"});
+          dispatch({type: "edit", valentine: valentineData});
         }
         setEditModalShow(false);
     })

@@ -1,0 +1,23 @@
+// Custom Palette START
+$mercury-light-blue: #97e0ff;
+$mercury-blue: #0097de;
+$mercury-dark-blue: #136f9e;
+$mercury-green: #2f9c89;
+$mercury-dark-green: #306960;
+$mercury-yellow: #ffe927;
+$mercury-light: #f3ffff;
+$mercury-dark: #323232;
+// Custom Palette END
+
+$theme-colors: (
+    "primary": $mercury-blue,
+    "secondary": $mercury-dark-blue,
+    "success": $mercury-dark-green,
+    "info": $mercury-light-blue,
+    "warning": $mercury-green,
+    "danger": $mercury-yellow,
+    "light": $mercury-light,
+    "dark": $mercury-dark
+);
+
+@import "~bootstrap/scss/bootstrap";

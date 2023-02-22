@@ -1,0 +1,23 @@
+// Custom Palette START
+$mars-red: #f84e13;
+$mars-dark-red: #93403c;
+$mars-red-brown: #59331e;
+$mars-purple: #4e449b;
+$mars-dark-purple: #393355;
+$mars-yellow: #ffe927;
+$mars-light: #f3ffff;
+$mars-dark: #323232;
+// Custom Palette END
+
+$theme-colors: (
+    "primary": $mars-red,
+    "secondary": $mars-red-brown,
+    "success": $mars-purple,
+    "info": $mars-dark-purple,
+    "warning": $mars-yellow,
+    "danger": $mars-dark-red,
+    "light": $mars-light,
+    "dark": $mars-dark
+);
+
+@import "~bootstrap/scss/bootstrap";

@@ -1,0 +1,47 @@
+// @use '_moon.scss';
+// @use '_mercury.scss';
+// @use '_mars.scss';
+// @use '_jupiter.scss';
+// @use '_venus.scss';
+
+@use '_jrpgenius.scss';
+
+// Custom Palette START
+$federal-blue: #110462ff;
+$cool-gray: #8d99aeff;
+$maize: #fff07cff;
+$dark-spring-green: #04724dff;
+$pumpkin: #f5853fff;
+$red-pantone: #ef233cff;
+$honeydew: #e8f7eeff;
+$bistre: #452921ff;
+// Custom Palette END
+
+// START Typography
+// font-family: 'Fira Sans Condensed', sans-serif;
+// font-family: 'Lato', sans-serif;
+// font-family: 'Trirong', serif;
+// END Typography
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Trirong', serif;
+    font-style: italic;
+    font-weight: 900;
+}
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: $bistre;
+    background-color: $honeydew;
+}
+
+.btn, .alert {
+    border-radius: 0;
+}

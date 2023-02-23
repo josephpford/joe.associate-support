@@ -1,0 +1,23 @@
+// Custom Palette START
+$moon-blue: #014da5;
+$moon-dark-blue: #0d396a;
+$moon-red: #ff3d58;
+$moon-dark-red: #a1393a;
+$moon-yellow: #ffe927;
+$moon-dark-yellow: #b89c0a;
+$moon-light: #f3ffff;
+$moon-dark: #323232;
+// Custom Palette END
+
+$theme-colors: (
+    "primary": $moon-blue,
+    "secondary": $moon-dark-red,
+    "success": $moon-dark-yellow,
+    "info": $moon-dark-blue,
+    "warning": $moon-yellow,
+    "danger": $moon-red,
+    "light": $moon-light,
+    "dark": $moon-dark
+);
+
+@import "~bootstrap/scss/bootstrap";

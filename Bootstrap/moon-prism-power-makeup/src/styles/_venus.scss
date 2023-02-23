@@ -1,0 +1,23 @@
+// Custom Palette START
+$venus-orange: #fe8502;
+$venus-dark-orange: #d95700;
+$venus-blue: #073e74;
+$venus-dark-blue: #162e4a;
+$venus-yellow: #ffe927;
+$venus-red: #fe3f08;
+$venus-light: #f3ffff;
+$venus-dark: #323232;
+// Custom Palette END
+
+$theme-colors: (
+    "primary": $venus-orange,
+    "secondary": $venus-blue,
+    "success": $venus-dark-orange,
+    "info": $venus-dark-blue,
+    "warning": $venus-yellow,
+    "danger": $venus-red,
+    "light": $venus-light,
+    "dark": $venus-dark
+);
+
+@import "~bootstrap/scss/bootstrap";

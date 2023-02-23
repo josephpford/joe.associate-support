@@ -1,0 +1,23 @@
+// Custom Palette START
+$jupiter-green: #369c39;
+$jupiter-dark-green: #224324;
+$jupiter-pink: #fe89bd;
+$jupiter-dark-pink: #ec4690;
+$jupiter-brown: #634819;
+$jupiter-yellow: #ffe927;
+$jupiter-light: #f3ffff;
+$jupiter-dark: #323232;
+// Custom Palette END
+
+$theme-colors: (
+    "primary": $jupiter-green,
+    "secondary": $jupiter-pink,
+    "success": $jupiter-dark-green,
+    "info": $jupiter-brown,
+    "warning": $jupiter-yellow,
+    "danger": $jupiter-dark-pink,
+    "light": $jupiter-light,
+    "dark": $jupiter-dark
+);
+
+@import "~bootstrap/scss/bootstrap";

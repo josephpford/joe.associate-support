@@ -6,6 +6,17 @@
 
 @use '_jrpgenius.scss';
 
+// Custom Palette START
+$federal-blue: #110462ff;
+$cool-gray: #8d99aeff;
+$maize: #fff07cff;
+$dark-spring-green: #04724dff;
+$pumpkin: #f5853fff;
+$red-pantone: #ef233cff;
+$honeydew: #e8f7eeff;
+$bistre: #452921ff;
+// Custom Palette END
+
 // START Typography
 // font-family: 'Fira Sans Condensed', sans-serif;
 // font-family: 'Lato', sans-serif;
@@ -27,6 +38,8 @@ body {
     font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: 400;
+    color: $bistre;
+    background-color: $honeydew;
 }
 
 .btn, .alert {

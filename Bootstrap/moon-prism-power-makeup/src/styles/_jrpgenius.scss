@@ -1,0 +1,25 @@
+// Custom Palette START
+$federal-blue: #110462ff;
+$cool-gray: #8d99aeff;
+$maize: #fff07cff;
+$dark-spring-green: #04724dff;
+$pumpkin: #f5853fff;
+$red-pantone: #ef233cff;
+$honeydew: #e8f7eeff;
+$bistre: #452921ff;
+// Custom Palette END
+
+$theme-colors: (
+    "primary": $federal-blue,
+    "secondary": $cool-gray,
+    "info": $maize,
+
+    "success": $dark-spring-green,
+    "warning": $pumpkin,
+    "danger": $red-pantone,
+
+    "light": $honeydew,
+    "dark": $bistre
+);
+
+@import "~bootstrap/scss/bootstrap";

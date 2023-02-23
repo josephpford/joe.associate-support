@@ -48,6 +48,8 @@ nothing to commit, working tree clean
 
 ![Workspace / Index / Repository / Remote](./assets/git-workspace.png)
 
+[Anna Skoulikari - Git Question: What is the difference between the working directory (aka workspace) and the repository?](https://medium.com/tech-journey-with-anna/git-question-what-is-the-difference-between-the-working-directory-aka-workspace-and-the-eeee15b7e4b3)
+
 ## GitHub-Flow branch-based workflow
 
 Branching Models
@@ -63,7 +65,6 @@ Branching Models
 
 More reading:
   - [multiple branching models](https://www.atlassian.com/git/tutorials/comparing-workflows)
-
 
 ### GitFlow
 
@@ -89,8 +90,6 @@ Consider installing [P4Merge](https://www.perforce.com/downloads/visual-merge-to
   - Can be difficult to setup/configure and we don't have time to do it in this lesson.
 
 ![P4Merge](./assets/p4merge.png)
-
-This is a test
 
 ## Tiny bit of VIM
 

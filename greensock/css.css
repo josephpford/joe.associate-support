@@ -1,0 +1,49 @@
+@font-face{
+    font-family:gummies;
+    src: url(gummy.ttf);
+}
+
+.banner{
+    width:300px;
+    height:400px;
+    border:solid 5px black;
+    background-color: cadetblue;
+    overflow:hidden;
+    position:relative;
+}
+
+#logo{
+    position:absolute;
+    left:105px;
+    top:35px;
+    opacity:0;
+    transform:scale(0);
+}
+
+#bear{
+    position: absolute;
+    left:40px;
+    top:130px;
+}
+
+#worm{
+    position: absolute;
+    left:-240px;
+    top:130px;
+}
+
+#snake{
+    position: absolute;
+    left:35px;
+    top:700px;
+}
+
+.text{
+    position:absolute;
+    font-family:gummies;
+    color:#FF8749;
+    font-size:26px;
+    text-shadow:1px 2px black;
+    top:500px;
+    left:12px;
+}

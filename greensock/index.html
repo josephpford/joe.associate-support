@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vat19 Banner</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+</head>
+<body>
+    <a href="https://www.vat19.com/products/search?q=gummy" target="_blank">
+        <div class="banner">
+            <img src="images/logo.png" alt="Vat19 Logo" id="logo">
+            <img src="images/bear.jpg" alt="1400 Gummy Bears" id="bear">
+            <img src="images/worm.jpg" alt="3 pound gummy worm" id="worm">
+            <img src="images/snake.jpg" alt="Freaking huge snake" id="snake">
+            <div class="text">Click for Yummy Gummies!</div>
+        </div>
+    </a>
+    <script>
+        (function(){
+            gsap.to("#logo",{opacity:1, scale:1.25, duration:2})
+            gsap.to("#logo", {scale:1, rotation:10, delay:1.9, repeat:-1, yoyo:true})
+            gsap.from("#bear", {left:350, ease: "back", rotation:360, duration:.75, delay:1})
+            gsap.to("#worm", {left:35, ease:"back(4)",duration:.75, delay:4})
+            gsap.to("#snake", {top:130, ease:"elastic", duration:1.5, delay:7})
+            gsap.to(".text", {top:325, ease: "bounce", duration:2.5, delay:1})
+        }());
+
+    </script>    
+</body>
+</html>

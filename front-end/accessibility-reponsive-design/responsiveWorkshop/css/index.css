@@ -3,11 +3,11 @@
     padding: 0;
     margin: 0;
     max-width:100%;
-    border:1px solid grey;
+    /* border:1px solid grey; */
 }
 /*General Styles*/
 html{
-    font-size:62.5%;
+    font-size:62.5%; /*1 rem === 10px*/ 
 }
 body{
     font-size:1.8rem;
@@ -225,4 +225,112 @@ nav.main a{
     justify-content:flex-end;
     align-items:flex-end;
 }
+
+/*Media Queries*/
+/*
+max-width = scaling down - it's targeted screen size or smaller
+min-width = scaling up - it't targeted screen size or bigger 
+*/
+@media (max-width:1400px){
+    #top{
+        margin-top: 9%;
+    }
+}
+/*medium devices tablets - 992*/
+@media (max-width: 992px){
+    #top{
+        margin-top:9%;
+    }
+    #top .titles h2{
+        color:#ded0cf;
+    }
+}
+@media (max-width:891px){
+     /*farm section*/
+     .container{
+        flex-wrap:wrap;
+    }
+    .box{
+        width:40%;
+        margin:2% 0;
+    }
+}
+/*mid-sized phones - 768*/
+@media (max-width: 768px){
+    /**navigation**/
+    header nav{
+        flex-wrap:wrap;
+        justify-content: center;
+        text-align:center;
+        height: 12vh;
+    }
+    .links{
+        width:100%;
+        padding:2% 0;
+    }
+    .logo{
+        margin-left:0;
+    }
+    /**top section**/
+    #top{
+        margin-top:12vh;
+    }
+    /*about section*/
+    .text{
+        width:90%;
+    }
+    /*contact section*/
+    .contact-info {
+        width: 70%;
+        line-height: 1.5;
+    }
+}
+@media (max-width:742px){
+     /*contact section*/
+     #contact{
+        flex-direction: column-reverse;
+    }
+    .left, .right{
+        width:100%;
+        text-align: center;
+    }
+    #contact h2{
+        order:3;
+    }
+    #contact h3{
+        text-align:center;
+    }
+}
+/*small phones landscape - 576 */
+@media (max-width: 576px){
+    /*farm section*/
+    .box{
+        width:70%;
+    }
+    /*gallery section*/
+    .gallery{
+        justify-content: center;
+    }
+    .gallery div{
+        width:70%;
+    }
+    /*footer*/
+    footer{
+        flex-wrap:wrap;
+        justify-content: center;
+    }
+    footer div{
+        width:80%;
+        text-align:center;
+    }
+    .copyright{
+        justify-content: center;
+        align-items: center;
+    }
+    nav.social{
+        width:80%;
+        margin:0 auto;
+    }
+}
+
 

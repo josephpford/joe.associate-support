@@ -12,6 +12,8 @@ Reset
   - `git reset --mixed` - Undo a commit, keeping the files that were committed, but not keeping them in the staging area
   - `git reset --hard` - Undo a commit, completely throwing away all changes.
 
+You can use feature/ABC-116 to practice these commands.
+
 ## Scenario
 
 1. You are working on a code change, and immediately after commit, you realize you made a typo in one of the files or in the commit message.

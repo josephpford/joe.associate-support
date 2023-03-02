@@ -1,0 +1,5 @@
+e5ba5bd8-3ccb-4a33-ab9f-522871314464~The Ridge~1~1~2020~POLY_SI~true
+4fc6d67b-d885-4739-bebc-9bdb18de55e8~The Ridge~1~2~2019~MONO_SI~true
+f7fbba91-09fc-489f-b9f9-e4eda444b9f7~Flats~1~1~2017~A_SI~true
+838ef245-dd1d-4427-82d2-c8fcff581f84~Flats~2~6~2017~CD_TE~true
+b2fd7e3a-b5e1-41bc-88ff-9b6d0aaac16f~Flats~3~7~2000~CIGS~false

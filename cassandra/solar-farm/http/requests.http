@@ -1,0 +1,93 @@
+GET http://localhost:8080/api/section/The Ridge
+
+###
+
+GET http://localhost:8080/api/section/New Section
+
+### 
+
+GET http://localhost:8080/api/panel/e5ba5bd8-3ccb-4a33-ab9f-522871314464
+
+###
+
+DELETE http://localhost:8080/api/panel/e5ba5bd8-3ccb-4a33-ab9f-522871314464
+
+###
+
+POST http://localhost:8080/api/panel
+Content-Type: application/json
+
+{
+    "section": "The Ridge",
+    "row": 1,
+    "column": 4,
+    "yearInstalled": 2020,
+    "material": "POLY_SI",
+    "tracking": true
+}
+
+### 
+
+PUT http://localhost:8080/api/panel/e5ba5bd8-3ccb-4a33-ab9f-522871314464
+Content-Type: application/json
+
+{
+    "id": "e5ba5bd8-3ccb-4a33-ab9f-522871314464",
+    "section": "New Section",
+    "row": 99,
+    "column": 99,
+    "yearInstalled": 1997,
+    "material": "CD_TE",
+    "tracking": false
+}
+
+###
+
+PUT http://localhost:8080/api/panel/4
+Content-Type: application/json
+
+{
+    "id": 4,
+    "section": "New Section",
+    "row": 99,
+    "column": 99,
+    "yearInstalled": 1997,
+    "material": "CD_TE",
+    "tracking": false
+}
+
+###
+
+
+PUT http://localhost:8080/api/panel/999
+Content-Type: application/json
+
+{
+    "id": 999,
+    "section": "Doesnt Exist",
+    "row": 99,
+    "column": 99,
+    "yearInstalled": 1997,
+    "material": "CD_TE",
+    "tracking": false
+}
+
+###
+
+GET http://localhost:8080/api/section/The Ridge
+
+###
+
+GET http://localhost:8080/api/section/New Section
+
+###
+
+GET http://localhost:8080/api/panel/4
+
+###
+
+DELETE http://localhost:8080/api/panel/32e77aaa-a933-4f29-b240-2cd398e49e45
+
+###
+
+DELETE http://localhost:8080/api/panel/999

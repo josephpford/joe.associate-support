@@ -6,6 +6,7 @@ Use the links below to explore some of the content we've gone over in the past.
   - [Git Training](./git-training/README.md)
   - [React Use State & User Reducer](./React-useState-useReducer/love-is-in-the-air/README.md)
   - [Regular Expressions](./regular-expressions/README.md)
+  - [Apache Cassandra](./cassandra/README.md)
 
 AWS Training
   - [AWS - Deploy API Eslastic Beanstalk Exercise](./aws/exercises/deploy-api-elastic-beanstalk-exercise.md)
